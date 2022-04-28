@@ -15,8 +15,11 @@ let sockets = [];
 
 routes.ws("/ws", (websocket, request) => {
     websocket.onmessage = message => {
-        if(message.data == "Init")
-            sockets.push(websocket);
+        if(message.data == "Init") {
+            if(isAdmin(request.cookies.token)) {
+                sockets.push(websocket);
+            }
+        }
     };
 })
 
