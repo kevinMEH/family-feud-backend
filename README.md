@@ -13,12 +13,12 @@ git clone https://github.com/kevinMEH/family-feud-backend
 npm install
 ```
 3. Setup:
-   - Create a file config.env in project root
-   - Copy variables `from example.config.env` to `config.env`
+   - Create a file config.env in project root.
+   - Copy variables from `example.config.env` to `config.env`. Set those variables to what your heart desires.
    - Create files `admins.json` and `users.json` in `src`. These two files will serve as databases.*
    - Populate both files with an empty array. ( `[]` )
 
-4. Run the express app:
+4. Start the express app:
 ```
 node index.js
 ```
